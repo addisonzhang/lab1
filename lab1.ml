@@ -212,7 +212,7 @@ functions in the lab to get some practice with automated unit testing.
 
 let square (x : int) : int  = x * x ;;
 
-let exercise7 = square(3);;
+let exercise7 = square(5);;
 
 (*......................................................................
 Exercise 8: Define a function say_hello that, given a name, creates a
@@ -230,7 +230,10 @@ to the function.
 - : string = "Hi Gabby. Welcome home! How are you today?"
 ......................................................................*)
 
-let say_hello (name : string) : string = "Hi " ^ name ^ ". How are you today?";;
+let say_hello (name : string) : string = 
+  if name = "Gabby" then "Hi " ^ name ^ ". Welcome home! How are you today?"
+  else if name = "gabby" then  "Hi " ^ name ^ ". Welcome home! How are you today?"
+  else  "Hi " ^ name ^ ". How are you today?";;
 say_hello "Gabby" ;;
 
 (*......................................................................
@@ -243,7 +246,7 @@ assume (perhaps unrealistically) that all prices are given as
 integers. For this lab, you may assume all prices given are
 non-negative.
 ......................................................................*)
-let small_bills (price : int) : bool = (price mod 20) == 0;;
+let small_bills (price : int) : bool = (price mod 20) != 0;;
 small_bills (55);;
 
 (*......................................................................
