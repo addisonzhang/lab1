@@ -212,7 +212,7 @@ functions in the lab to get some practice with automated unit testing.
 
 let square (x : int) : int  = x * x ;;
 
-square(3) ;;
+let exercise7 = square(3);;
 
 (*......................................................................
 Exercise 8: Define a function say_hello that, given a name, creates a
