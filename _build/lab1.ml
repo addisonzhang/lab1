@@ -212,7 +212,7 @@ functions in the lab to get some practice with automated unit testing.
 
 let square (x : int) : int  = x * x ;;
 
-square(3) ;;
+let exercise7 = square(3) ;;
 
 (*......................................................................
 Exercise 8: Define a function say_hello that, given a name, creates a
@@ -231,7 +231,7 @@ to the function.
 ......................................................................*)
 
 let say_hello (name : string) : string = "Hi " ^ name ^ ". How are you today?";;
-say_hello "Gabby" ;;
+let exercise8 = say_hello "Gabby" ;;
 
 (*......................................................................
 Exercise 9: Define a function, small_bills, that determines, given a
@@ -244,7 +244,7 @@ integers. For this lab, you may assume all prices given are
 non-negative.
 ......................................................................*)
 let small_bills (price : int) : bool = (price mod 20) == 0;;
-small_bills (55);;
+let exercise9 = small_bills (40);;
 
 (*......................................................................
 Exercise 10:
@@ -272,30 +272,10 @@ that:
 
 ......................................................................*)
 
-let easter_fun (y, month) : int = 
-  let a = y mod 19 in
-  let b = y / 100 in
-  let c = y mod 100 in
-  let d = b / 4 in
-  let e = b mod 4 in 
-  let f = (b + 8) / 25 in
-  let g = (b - f + 1) / 3 in 
-  let h = (19*a + b - d - g + 15) mod 30 in 
-  let i = c / 4 in 
-  let k = c mod 4 in 
-  let l = (32 + 2*e + 2*i - h - k) mod 7 in 
-  let m = (a + 11*h + 22*l) / 451 in 
-  if month then ((h + l - 7*m + 114) / 31)
-  else (((h + l - 7*m + 114) mod 31) + 1);;
-
-
-
-let computus_month (year : int) : int = easter_fun (year, true);;
-
-let computus_day (year : int) : int = easter_fun(year, false);;
-
-computus_month 2018;;
-computus_day 2018 ;;
+let computus_month (year : int) : int =
+  failwith "computus_month not implemented" ;;
+let computus_day (year : int) : int =
+  failwith "computus_day not implemented" ;;
 
 (*======================================================================
 Part 4: Utilizing recursion
@@ -313,11 +293,8 @@ this exercise, you may assume all inputs will be positive.
 
 ......................................................................*)
 
-let rec factorial (x : int) : int = 
-  if x = 0 then 1 
-  else x * factorial(x - 1) ;;
-
-factorial 4 ;;
+let factorial (x : int) : int =
+  failwith "factorial not implementated" ;;
 
 (*......................................................................
 Exercise 12: Define a recursive function that sums all the elements
@@ -335,9 +312,5 @@ the mathematician Carl Freiedrich Gauss as a seven-year-old, *in his
 head*!)
 ......................................................................*)
 
-let rec sum_from_zero (x : int) : int = 
-  if x = 0 then 0 
-    else if x > 0 then x + sum_from_zero(x - 1)
-    else x + sum_from_zero(x + 1);;
-
-sum_from_zero ~-3 ;;
+let sum_from_zero (x : int) : int =
+  failwith "sum_from_zero not implemented" ;;

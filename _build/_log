@@ -1,0 +1,8 @@
+### Starting build.
+# Target: lab1.ml.depends, tags: { warn(A-4-33-40-41-42-43-34-44), extension:ml, file:lab1.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str }
+/Users/addison/.opam/4.06.0/bin/ocamldep.opt -modules lab1.ml > lab1.ml.depends
++ /Users/addison/.opam/4.06.0/bin/ocamldep.opt -modules lab1.ml > lab1.ml.depends
+File "lab1.ml", line 179, characters 17-20:
+Error: Syntax error
+Command exited with code 2.
+# Compilation unsuccessful.
