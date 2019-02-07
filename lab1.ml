@@ -231,10 +231,9 @@ to the function.
 ......................................................................*)
 
 let say_hello (name : string) : string = 
-  if name = "Gabby" then "Hi " ^ name ^ ". Welcome home! How are you today?"
-  else if name = "gabby" then  "Hi " ^ name ^ ". Welcome home! How are you today?"
+  if (name = "Gabby" || name = "gabby") then "Hi " ^ name ^ ". Welcome home! How are you today?"
   else  "Hi " ^ name ^ ". How are you today?";;
-say_hello "Gabby" ;;
+say_hello "gabby" ;;
 
 (*......................................................................
 Exercise 9: Define a function, small_bills, that determines, given a
@@ -246,7 +245,7 @@ assume (perhaps unrealistically) that all prices are given as
 integers. For this lab, you may assume all prices given are
 non-negative.
 ......................................................................*)
-let small_bills (price : int) : bool = (price mod 20) != 0;;
+let small_bills (price : int) : bool = (price mod 20) <> 0;;
 small_bills (55);;
 
 (*......................................................................
@@ -342,5 +341,8 @@ let rec sum_from_zero (x : int) : int =
   if x = 0 then 0 
     else if x > 0 then x + sum_from_zero(x - 1)
     else x + sum_from_zero(x + 1);;
+
+(* succ x 
+pred x  *)
 
 sum_from_zero ~-3 ;;
